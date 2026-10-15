@@ -1,0 +1,2 @@
+import test from "node:test"; import assert from "node:assert/strict"; import { evaluateSuite } from "./index.js";
+test("computes deterministic retrieval and grounding metrics",()=>{ const r=evaluateSuite([{id:"a",relevantDocumentIds:["1","2"],retrievedDocumentIds:["2","3"],answer:"Stockholm is in Sweden",requiredFacts:["Sweden"]}],.5); assert.equal(r.averages.precisionAtK,.5); assert.equal(r.averages.recallAtK,.5); assert.equal(r.passed,true); });
