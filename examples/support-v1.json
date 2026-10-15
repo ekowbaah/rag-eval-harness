@@ -1,0 +1,19 @@
+{
+  "version": "support-v1",
+  "cases": [
+    {
+      "id": "refund-window",
+      "query": "How long do I have to request a refund?",
+      "relevantDocumentIds": ["policy-refunds"],
+      "retrievedDocuments": [
+        {"id": "policy-refunds", "score": 0.97},
+        {"id": "policy-shipping", "score": 0.41}
+      ],
+      "answer": "Refunds can be requested within 30 days of delivery.",
+      "requiredFacts": ["30 days", "delivery"],
+      "citedDocumentIds": ["policy-refunds"],
+      "latencyMs": 84,
+      "costUsd": 0.002
+    }
+  ]
+}

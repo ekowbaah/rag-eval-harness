@@ -1,1 +1,17 @@
-{"name":"rag-eval-harness","version":"0.1.0","private":true,"type":"module","scripts":{"build":"tsc","test":"npm run build && node --test dist/**/*.test.js"},"devDependencies":{"typescript":"^5.9.3","@types/node":"^22.15.0"}}
+{
+  "name": "rag-eval-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {"rag-eval": "dist/cli.js"},
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "example": "npm run build && node dist/cli.js examples/support-v1.json --min groundedness=0.9",
+    "test": "npm run build && node --test dist/**/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.9.3"
+  }
+}
